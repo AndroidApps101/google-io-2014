@@ -25,7 +25,6 @@ import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.Menu;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 
 public class MainActivity extends Activity {
@@ -84,7 +83,6 @@ public class MainActivity extends Activity {
         }
 
         ImageView hero = (ImageView) ((View) view.getParent()).findViewById(R.id.photo);
-        ((ViewGroup) hero.getParent()).setTransitionGroup(false);
 
         sPhotoCache.put(intent.getIntExtra("photo", -1),
                 ((BitmapDrawable) hero.getDrawable()).getBitmap());
